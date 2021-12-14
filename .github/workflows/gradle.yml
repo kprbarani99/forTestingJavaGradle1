@@ -58,10 +58,12 @@ jobs:
         run: sudo apt install wget
       - name: Download sonar scanner jar
         run: |
-          wget https://binaries.sonarsource.com/Distribution/sonarqube-ant-task/sonarqube-ant-task-2.7.1.1951.jar -O '/home/runner/work/simple-java-maven-app/simple-java-maven-app/lib/sonarqube-ant-task-2.7.1.1951.jar'
+          wget https://binaries.sonarsource.com/Distribution/sonarqube-ant-task/sonarqube-ant-task-2.7.1.1951.jar
+          #wget https://binaries.sonarsource.com/Distribution/sonarqube-ant-task/sonarqube-ant-task-2.7.1.1951.jar -O '/home/runner/work/simple-java-maven-app/simple-java-maven-app/lib/sonarqube-ant-task-2.7.1.1951.jar'
       - name: Download jacoco jar
         run: |
-          wget https://repo1.maven.org/maven2/org/jacoco/jacoco/0.8.1/jacoco-0.8.1.zip -O '/home/runner/work/simple-java-maven-app/simple-java-maven-app/lib/jacoco-0.8.1.zip'
+          wget https://repo1.maven.org/maven2/org/jacoco/jacoco/0.8.1/jacoco-0.8.1.zip
+          #wget https://repo1.maven.org/maven2/org/jacoco/jacoco/0.8.1/jacoco-0.8.1.zip -O '/home/runner/work/simple-java-maven-app/simple-java-maven-app/lib/jacoco-0.8.1.zip'
           unzip /home/runner/work/simple-java-maven-app/simple-java-maven-app/lib/jacoco-0.8.1.zip
           ls -ltr
            
