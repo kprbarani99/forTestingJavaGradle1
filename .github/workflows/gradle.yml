@@ -47,7 +47,8 @@ jobs:
        
       ######## Build - ANT ########       
       - name: Download sonar scanner jar
-        run: wget 'https://github.com/junit-team/junit4/releases/download/r4.12/junit-4.12.jar' -O '/home/runner/work/simple-java-maven-app/simple-java-maven-app/lib/junit-4.12.jar'
+        run: |
+          wget https://github.com/junit-team/junit4/releases/download/r4.12/junit-4.12.jar -O '/home/runner/work/simple-java-maven-app/simple-java-maven-app/lib/junit-4.12.jar'
       
       - name: Build with Ant
         if: ${{ env.BUILD_TECH == 'java_ant'  }}
@@ -56,7 +57,8 @@ jobs:
       - name: Install Wget
         run: sudo apt install wget
       - name: Download sonar scanner jar
-        run: wget 'https://binaries.sonarsource.com/Distribution/sonarqube-ant-task/sonarqube-ant-task-2.7.1.1951.jar' -O '/home/runner/work/simple-java-maven-app/simple-java-maven-app/lib/sonarqube-ant-task-2.7.1.1951.jar'
+        run: |
+          wget https://binaries.sonarsource.com/Distribution/sonarqube-ant-task/sonarqube-ant-task-2.7.1.1951.jar -O '/home/runner/work/simple-java-maven-app/simple-java-maven-app/lib/sonarqube-ant-task-2.7.1.1951.jar'
       - name: Download jacoco jar
         run: |
           wget https://repo1.maven.org/maven2/org/jacoco/jacoco/0.8.1/jacoco-0.8.1.zip -O '/home/runner/work/simple-java-maven-app/simple-java-maven-app/lib/jacoco-0.8.1.zip'
